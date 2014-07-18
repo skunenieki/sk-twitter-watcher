@@ -1,1 +1,114 @@
-{}
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
+    ],
+    "hash": "fd9d4b05fb606035e5e2e29787d1fd9e",
+    "packages": [
+        {
+            "name": "fennb/phirehose",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/fennb/phirehose.git",
+                "reference": "d34c8b717782aad317dd9d188c035bfc179410ae"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/fennb/phirehose/zipball/d34c8b717782aad317dd9d188c035bfc179410ae",
+                "reference": "d34c8b717782aad317dd9d188c035bfc179410ae",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2.0"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "lib"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL"
+            ],
+            "authors": [
+                {
+                    "name": "Fenn Bailey",
+                    "homepage": "http://fennb.com/"
+                }
+            ],
+            "description": "A PHP interface to the Twitter Streaming API.",
+            "homepage": "https://github.com/fennb/phirehose",
+            "keywords": [
+                "api",
+                "phirehose",
+                "php",
+                "streaming",
+                "twitter"
+            ],
+            "time": "2014-01-16 06:37:24"
+        },
+        {
+            "name": "videlalvaro/php-amqplib",
+            "version": "v2.2.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/videlalvaro/php-amqplib.git",
+                "reference": "6ef2ca9a45bb9fb20872f824f4c7c1518315bd3f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/videlalvaro/php-amqplib/zipball/6ef2ca9a45bb9fb20872f824f4c7c1518315bd3f",
+                "reference": "6ef2ca9a45bb9fb20872f824f4c7c1518315bd3f",
+                "shasum": ""
+            },
+            "require": {
+                "ext-bcmath": "*",
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "3.7.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "PhpAmqpLib": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL-2.1"
+            ],
+            "authors": [
+                {
+                    "name": "Alvaro Videla"
+                }
+            ],
+            "description": "This library is a pure PHP implementation of the AMQP protocol. It's been tested against RabbitMQ.",
+            "homepage": "https://github.com/videlalvaro/php-amqplib/",
+            "keywords": [
+                "message",
+                "queue",
+                "rabbitmq"
+            ],
+            "time": "2013-12-22 12:49:53"
+        }
+    ],
+    "packages-dev": [
+
+    ],
+    "aliases": [
+
+    ],
+    "minimum-stability": "stable",
+    "stability-flags": [
+
+    ],
+    "platform": {
+        "hhvm": "3.*"
+    },
+    "platform-dev": [
+
+    ]
+}
