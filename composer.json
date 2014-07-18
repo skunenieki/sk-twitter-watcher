@@ -1,1 +1,6 @@
-{}
+{
+  "require": {
+    "hhvm": "3.*",
+    "fennb/phirehose": ">=1.0.0"
+  }
+}
