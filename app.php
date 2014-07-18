@@ -3,7 +3,6 @@
 require_once 'vendor/autoload.php';
 require_once 'FilterTrackConsumer.php';
 
-use PhpAmqpLib\Message\AMQPMessage;
 use PhpAmqpLib\Connection\AMQPConnection;
 
 $consumerKey       = getenv('TWITTER_CONSUMER_KEY');

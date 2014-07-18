@@ -1,5 +1,7 @@
 <?php
 
+use PhpAmqpLib\Message\AMQPMessage;
+
 class FilterTrackConsumer extends OauthPhirehose
 {
     /**
