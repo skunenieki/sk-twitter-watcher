@@ -15,7 +15,13 @@ class FilterTrackConsumer extends OauthPhirehose
         if (is_array($data) && isset($data['entities']['media'])) {
             foreach ($data['entities']['media'] as $media) {
                 if ($media['type'] == 'photo') {
-                    $msg_body = json_encode($data);
+                    $message = array(
+                        'source' => 'twitter',
+                        'url'    => $media['media_url'] . ':large',
+                        'author' => $data['user']]'screen_name'],
+                        'time'   => strtotime($data['created_at']),
+                    );
+                    $msg_body = json_encode($message);
                     $msg = new AMQPMessage($msg_body, array('content_type' => 'text/plain', 'delivery_mode' => 2));
                     $this->amqp->basic_publish($msg, $this->exchange);
 
