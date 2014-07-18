@@ -19,7 +19,7 @@ class FilterTrackConsumer extends OauthPhirehose
                     $msg = new AMQPMessage($msg_body, array('content_type' => 'text/plain', 'delivery_mode' => 2));
                     $this->amqp->basic_publish($msg, $this->exchange);
 
-                    error_log($msg_body);
+                    $this->log('Pushed message to queue!');
                 }
             }
         }
