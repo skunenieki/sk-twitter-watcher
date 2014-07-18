@@ -1,6 +1,7 @@
 {
   "require": {
     "hhvm": "3.*",
-    "fennb/phirehose": ">=1.0.0"
+    "fennb/phirehose": ">=1.0.0",
+    "videlalvaro/php-amqplib": "2.2.*"
   }
 }
