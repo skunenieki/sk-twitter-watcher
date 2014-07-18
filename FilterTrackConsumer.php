@@ -17,7 +17,7 @@ class FilterTrackConsumer extends OauthPhirehose
                 if ($media['type'] == 'photo') {
                     $msg_body = json_encode($data);
                     $msg = new AMQPMessage($msg_body, array('content_type' => 'text/plain', 'delivery_mode' => 2));
-                    $amqp->basic_publish($msg, $this->exchange);
+                    $this->amqp->basic_publish($msg, $this->exchange);
 
                     error_log($msg_body);
                 }
