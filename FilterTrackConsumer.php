@@ -18,7 +18,7 @@ class FilterTrackConsumer extends OauthPhirehose
                     $message = array(
                         'source' => 'twitter',
                         'url'    => $media['media_url'] . ':large',
-                        'author' => $data['user']]'screen_name'],
+                        'author' => $data['user']['screen_name'],
                         'time'   => strtotime($data['created_at']),
                     );
                     $msg_body = json_encode($message);
