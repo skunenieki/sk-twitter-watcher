@@ -1,1 +1,1 @@
-worker: hhvm test.php
+worker: hhvm app.php
