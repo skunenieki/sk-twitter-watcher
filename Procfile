@@ -1,1 +1,1 @@
-web: vendor/bin/heroku-hhvm-nginx public
+worker: hhvm test.php

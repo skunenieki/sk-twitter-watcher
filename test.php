@@ -21,7 +21,6 @@ class FilterTrackConsumer extends OauthPhirehose
         foreach ($data['entities']['media'] as $media) {
             if ($media['type'] == 'photo') {
                 error_log(json_encode($data));
-                exit;
             }
         }
     }
