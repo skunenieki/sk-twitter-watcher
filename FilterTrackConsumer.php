@@ -16,10 +16,11 @@ class FilterTrackConsumer extends OauthPhirehose
             foreach ($data['entities']['media'] as $media) {
                 if ($media['type'] == 'photo') {
                     $message = array(
-                        'source' => 'twitter',
-                        'url'    => $media['media_url'] . ':large',
-                        'author' => $data['user']['screen_name'],
-                        'time'   => strtotime($data['created_at']),
+                        'source'     => 'twitter',
+                        'url'        => $media['media_url'] . ':large',
+                        'author'     => $data['user']['screen_name'],
+                        'author_img' => $data['user']['profile_image_url'],
+                        'time'       => strtotime($data['created_at']),
                     );
                     $msg_body = json_encode($message);
                     $msg = new AMQPMessage($msg_body, array('content_type' => 'text/plain', 'delivery_mode' => 2));
