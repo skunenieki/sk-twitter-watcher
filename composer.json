@@ -1,8 +1,8 @@
 {
   "require": {
-    "hhvm": "3.*",
-    "fennb/phirehose": "dev-master",
-    "videlalvaro/php-amqplib": "2.2.*"
-  },
-  "minimum-stability": "dev"
+    "php": ">=5.5",
+    "fennb/phirehose": "^1.0",
+    "videlalvaro/php-amqplib": "^2.2",
+    "vlucas/phpdotenv": "^2.0"
+  }
 }

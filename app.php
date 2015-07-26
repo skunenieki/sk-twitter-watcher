@@ -3,18 +3,25 @@
 require_once 'vendor/autoload.php';
 require_once 'FilterTrackConsumer.php';
 
+try {
+    $dotenv = new Dotenv\Dotenv(__DIR__);
+    $dotenv->load();
+} catch(Exception $e) {
+    //
+}
+
 use PhpAmqpLib\Connection\AMQPConnection;
 
+$amqpUrl           = getenv('CLOUDAMQP_URL');
+$accessToken       = getenv('TWITTER_ACCESS_TOKEN');
 $consumerKey       = getenv('TWITTER_CONSUMER_KEY');
 $consumerSecret    = getenv('TWITTER_CONSUMER_SECRET');
-$accessToken       = getenv('TWITTER_ACCESS_TOKEN');
 $accessTokenSecret = getenv('TWITTER_TOKEN_SECRET');
 
 $exchange = 'router';
 $queue    = 'msgs';
 $port     = '5672';
 
-$amqpUrl = getenv('CLOUDAMQP_URL');
 $parts   = explode('/', $amqpUrl);
 $user    = $vhost = $parts[3];
 $parts   = explode('@', $parts[2]);
